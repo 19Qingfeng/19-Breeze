@@ -1,16 +1,8 @@
 const path = require("path")
-const {
-    CleanWebpackPlugin
-} = require('clean-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 module.exports = {
-    mode: "production",
     entry: {
-        index: path.resolve(__dirname, "./src/index.js")
-    },
-    devServer: {
-        contentBase: path.resolve(__dirname, "./public"),
-        port: 9000,
-        compress: true
+        main: path.resolve(__dirname, "../src/index.js")
     },
     module: {
         rules: [{
@@ -37,10 +29,11 @@ module.exports = {
             }
         ]
     },
-    plugins: [new CleanWebpackPlugin()],
+    plugins: [
+        new VueLoaderPlugin()
+    ],
     output: {
         filename: "[name].js",
-        library: "breeze",
-        libraryTarget: "umd"
+        path: path.resolve(__dirname, "../dist")
     }
 }
