@@ -1,9 +1,5 @@
-module.exports = ({
-    file,
-    options,
-    env
-}) => ({
+module.exports = {
     plugins: [
-        'autoprefixer'
+        require("autoprefixer")
     ]
-})
+}

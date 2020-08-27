@@ -1,7 +1,10 @@
-import TestComponent from "./component/index.vue"
+import Checkbox from "./component/checkbox.vue"
+import Tree from "./component/tree.vue"
 
 function install(Vue, options) {
-    Vue.component(TestComponent.name, TestComponent)
+    Vue.component(Checkbox.name, Checkbox)
+    Vue.component(Tree.name, Tree)
+    console.log('-----')
     Vue.myGlobalMethod = function () {
         // 逻辑...
     }
@@ -27,18 +30,27 @@ function install(Vue, options) {
 }
 
 
-// 整体引入
-export default {
-    install
+
+
+const BreezeCheckbox = {
+    install(Vue, options) {
+        Vue.component(Checkbox.name, Checkbox)
+    }
 }
 
-const test = {
+const BreezeTree = {
     install(Vue, options) {
-        Vue.component(TestComponent.name, TestComponent)
+        Vue.component(Tree.name, Tree)
     }
 }
 
 // 单个导出
 export {
-    test
+    BreezeCheckbox,
+    BreezeTree
+}
+
+// 整体导出
+export default {
+    install
 }

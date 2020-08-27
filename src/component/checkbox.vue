@@ -4,6 +4,7 @@
       <slot />
     </span>
     <input
+      v-show="false"
       :id="id"
       class="checkbox"
       ref="checkbox"
@@ -12,13 +13,20 @@
       v-model="currentValue"
       @change="change"
     />
-    <span class="title">显示</span>
+    <span class="title">
+      <i
+        :class="`${currentValue ? 
+         'icon-checkbox'  : 
+        indeterminate ? 'icon-indeterminatecheckbox' :  'icon-checkboxoutlineblank'
+      } iconfont breeze_checkbox`"
+      />
+    </span>
   </label>
 </template>
 
 <script>
 export default {
-  name: "checkbox",
+  name: "BreezeCheckbox",
   props: {
     disabled: {
       type: Boolean,
@@ -101,12 +109,16 @@ export default {
   line-height: 16px;
 }
 .checkbox ~ .title {
-  color: red;
+  color: #000;
 }
-input[type="checkbox"]:checked ~ span {
-  /* background-color: blue; */
-  /* color: blue; */
-  color: red;
-  background-color: yellowgreen;
+input[type="checkbox"]:checked + .title {
+  border: none;
+  display: inline-block;
+  color: #409eff;
+  /* background-color: #409eff; */
+}
+
+.icon-indeterminatecheckbox {
+  color: #409eff;
 }
 </style>

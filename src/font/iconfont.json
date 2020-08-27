@@ -1,0 +1,23 @@
+{
+  "id": "2030372",
+  "name": "Breeze",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "433844",
+      "name": "check_box_outline_blank",
+      "font_class": "checkboxoutlineblank",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "489973",
+      "name": "check_box",
+      "font_class": "checkbox",
+      "unicode": "ead4",
+      "unicode_decimal": 60116
+    }
+  ]
+}

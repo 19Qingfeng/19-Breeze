@@ -26,6 +26,22 @@ module.exports = {
                         importLoaders: 2
                     }
                 }, 'sass-loader', 'postcss-loader']
+            },
+            {
+                test: /\.css/,
+                use: ['style-loader', {
+                    loader: 'css-loader',
+                    options: {
+                        importLoaders: 1
+                    }
+                }, 'postcss-loader']
+            },
+            {
+                test: /\.(eot|ttf|woff?2)$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {}
+                }]
             }
         ]
     },
