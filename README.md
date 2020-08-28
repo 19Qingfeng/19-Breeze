@@ -2,7 +2,15 @@
 
 一些自己样式的component提供Vue使用。
 
+目前更新
+
+* checkbox
+
+* Tree
+
 > commonjs、es modules、amd引入。
+
+### ES module，vue中引入。
 
 ``` 
 import Vue from 'vue'
@@ -17,13 +25,19 @@ Vue.use(BreezeComponent)
 
 ![chekboxt.png](https://i.loli.net/2020/08/27/vPBSAxVhkb2peXH.jpg)
 
-* v-model:checkbox绑定值。
-* disabled: 是否禁用。
-* trueValue: 选中时v-model值，默认true。
-* falseValue: 为选中时v-model值，默认false。
-* indeterminate: 是否不确定，仅仅控制样式。
-* id:checkbox唯一id。
-* on-change: 状态改变事件。
+##### Prop
+
+| prop |  description | type |
+|-----|:-----:|-----:|
+| v-model |   checkbox绑定值  | Boolean |
+| disabled |   是否禁用  | Boolean |
+| trueValue |   绑定值为true时向外触发的值，默认true  | Any |
+| falseValue |   绑定值为false时向外触发的值，默认false  | Any |
+| indeterminate |   是否不确定样式，仅控制样式  | Boolean |
+| id |   需要唯一  | any |
+| on-change |   绑定值改变事件  | 参数:value |
+
+##### use
 
 ``` 
 <breeze-checkbox 
@@ -35,13 +49,18 @@ Vue.use(BreezeComponent)
 
 ### Tree
 
-![Tree](https://i.loli.net/2020/08/27/8u1bXwCaq72KnQR.jpg)
+![Tree.png](https://i.loli.net/2020/08/27/8u1bXwCaq72KnQR.jpg)
+
+| prop |  description | type |
+|-----|:-----:|-----:|
+| TreeDs |   节点数据  | Array |
+| checkedData |   默认选中数据  | Array |
 
 * TreeDs
 
     1. code:标签唯一code。
 
-    2. pcode:标签对应父节点code，顶级节点pcode未空。
+    2. pcode:标签对应父节点code，顶级节点pcode必须为空字符串。
 
     3. name:标签名称。
 
@@ -53,21 +72,9 @@ Vue.use(BreezeComponent)
 
 > 默认选中数据
 
+#### use
+
 ``` 
 <breeze-tree :treeDs="data" :checkedData="defaultChecked" / >
-...
-defaultChecked: [
-        {
-          code: "01",
-          name: "人口属性",
-          pcode: "",
-        },
-        {
-          code: "0102004",
-          name: "31-40岁",
-          pcode: "0102",
-          description: 15828,
-        },
-],
-data: [] // mock文件夹->tree.js文件
+
 ```

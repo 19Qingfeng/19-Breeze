@@ -1,8 +1,8 @@
 {
-  "name": "19-Breeze",
+  "name": "19breeze",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production  --config config/webpack.prod.js",
