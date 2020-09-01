@@ -1,10 +1,11 @@
 import Checkbox from "./component/checkbox.vue"
 import Tree from "./component/tree.vue"
+import Message from "./component/alert/alert.js"
 
 function install(Vue, options) {
     Vue.component(Checkbox.name, Checkbox)
     Vue.component(Tree.name, Tree)
-    console.log('-----')
+
     Vue.myGlobalMethod = function () {
         // 逻辑...
     }
@@ -26,6 +27,9 @@ function install(Vue, options) {
     // 4. 添加实例方法
     Vue.prototype.$myMethod = function (methodOptions) {
         // 逻辑...
+    }
+    Vue.prototype.$message = function (methodOptions) {
+        Message.info(methodOptions)
     }
 }
 

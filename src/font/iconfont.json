@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "14477241",
+      "name": "关闭",
+      "font_class": "guanbi",
+      "unicode": "e677",
+      "unicode_decimal": 58999
+    },
+    {
+      "icon_id": "490237",
+      "name": "indeterminate_check_box",
+      "font_class": "indeterminatecheckbox",
+      "unicode": "ebce",
+      "unicode_decimal": 60366
+    },
+    {
       "icon_id": "433844",
       "name": "check_box_outline_blank",
       "font_class": "checkboxoutlineblank",

@@ -21,7 +21,7 @@ Vue.use(BreezeComponent)
 
 > 没有上传npm，所以直接引入dist下的js文件即可。
 
-### Checkbox
+### Checkbox: 多选框
 
 ![chekboxt.png](https://i.loli.net/2020/08/27/vPBSAxVhkb2peXH.jpg)
 
@@ -47,7 +47,31 @@ Vue.use(BreezeComponent)
 </breeze-checkbox>
 ```
 
-### Tree
+### Message组件
+
+![message.png](https://i.loli.net/2020/09/01/YhT5PVlWUKs8zc4.jpg)
+
+#### prop
+
+| prop |  description | type | default |
+|-----|:-----:|-----:|-----:|
+| content |   弹窗内容  | String | '' |
+| type |   弹窗类型  | 'info', 'success', 'error' | 'info' |
+| duration |   持续时间(s)  | String | 1.5s |
+| close |   是否可关闭  | Boolean | false |
+
+#### use
+
+``` 
+this.$message({
+      content: "",
+      type: "info",
+      close: true,
+      duration: 1.5,
+});
+```
+
+### Tree: 横向树组件
 
 ![Tree.png](https://i.loli.net/2020/08/27/8u1bXwCaq72KnQR.jpg)
 
