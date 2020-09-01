@@ -19,6 +19,8 @@ Alert.newInstance = properties => {
     // 如果mount()没有提供 elementOrSelector 参数，
     // 模板将被渲染为文档之外的的元素，
     // 并且你必须使用原生 DOM API 把它插入文档中。
+    // 通过component.$el获得已被渲染的元素（文档之外）。
+    // 原生DOM API appendChild进行插入。
     document.body.appendChild(component.$el);
 
     const alert = Instance.$children[0];

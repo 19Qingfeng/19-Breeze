@@ -54,7 +54,7 @@ Vue.use(BreezeComponent)
 #### prop
 
 | prop |  description | type | default |
-|-----|:-----:|-----:|-----:|
+| :-: |:-: |:-:|:-: |
 | content |   弹窗内容  | String | '' |
 | type |   弹窗类型  | 'info', 'success', 'error' | 'info' |
 | duration |   持续时间(s)  | String | 1.5s |
